@@ -1,0 +1,214 @@
+/* Start Screen */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFF5FA;
+    user-select: none;
+}
+:root{
+    @media screen and (max-width: 700px) {
+        font-size: 11px;
+    }
+}   
+.start-screen{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+.content-box{
+    border: 2px solid black;
+    padding: 10px 100px;
+    text-align: center;
+    background-color: #66CCFF;
+}
+#start-heading{
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 3rem;
+}
+.start-btn{
+    background-color: pink;
+    box-shadow: 3px 3px 0;
+    margin: 30px 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 300px;
+    cursor: pointer;
+}
+.start-btn:active{
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+/* Quiz Screen */
+.quiz-screen{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.content-box-quiz-screen{
+    border: 2px solid black;
+    width: clamp(50px, 80%, 820px);
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #66CCFF;
+}
+.header{
+    display: flex;
+    margin: 0 0 60px 0;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+.timer{
+    margin-left: auto;
+}
+.question-canvas{
+    margin-bottom: 35px;
+}
+.nav{
+    display: flex;
+}
+.nav button{
+    background-color: pink;
+    box-shadow: 3px 3px 0;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 4px 25px;
+    cursor: pointer;
+}
+.nav button:active{
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+.question{
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #FFD54F;
+    border-radius: 15px;
+}
+.choice-opt{
+    margin-left: 15px;
+    cursor: pointer;
+}
+input[type="radio"] {
+  transform: scale(1.5);   /* increase to 1.5x size */
+  cursor: pointer;
+}
+
+/* Result Screen */
+.result-screen{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.result-box-quiz-screen{
+    border: 2px solid black;
+    width: clamp(50px, 80%, 820px);
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #66CCFF;
+}
+.result-header{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.result-box-quiz-screen button{
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+.nav-result{
+    display: flex;
+}
+.res-btn button{
+    background-color: pink;
+    box-shadow: 3px 3px 0;
+    margin: 30px 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 300px;
+    cursor: pointer;
+}
+.res-btn button:active{
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+.toast{
+    background-color: hsl(0, 100%, 70%);
+    width: 300px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+/* Highscore Screen */
+.highscore-screen{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.highscore-box-quiz-screen{
+    border: 2px solid black;
+    width: clamp(50px, 80%, 820px);
+    font-size: 2rem;
+    padding: 10px 20px;
+    background-color: #66CCFF;
+}
+#highscore-header{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 25px;    
+}
+.rank-header{
+    font-size: 2.5rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.rank-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+    background-color: #FFD54F;
+    border-radius: 50px;
+}
+.bottom-option{
+    display: flex;
+}
+.bottom-option button{
+    background-color: pink;
+    box-shadow: 3px 3px 0;
+    margin: 30px 0;
+    padding: 20px;
+    font-size: 1.5rem;
+    width: 300px;
+    cursor: pointer;
+}
+.bottom-option button:active{
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
