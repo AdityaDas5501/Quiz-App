@@ -17,8 +17,8 @@ function viewHighScoreResult(){
 function saveScore(){
     window.playerName = document.querySelector('.nameInput').value;
     if(playerName===""){
-        document.querySelector('.toast').style.visibility = 'visible';
-        setTimeout(function(){document.querySelector('.toast').style.visibility = 'hidden'},1500);
+        document.querySelector('.toast').style.opacity = 1;
+        setTimeout(function(){document.querySelector('.toast').style.opacity = 0},2500);
         return;
     }
     window.highscores = JSON.parse(localStorage.getItem("highscores")) || [];

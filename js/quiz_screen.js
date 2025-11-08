@@ -24,7 +24,7 @@ function nextQues(){
     //     document.querySelector('.prev-btn').style.display = "inline";
 
     questionNoElement.innerText = `Question No. ${questionNo+1}`;
-    questionElement.innerText = `Questions: ${questions[questionNo].ques}`;
+    questionElement.innerText = `${questions[questionNo].ques}`;
 
     let choicesHtml = `
           <label><input type="radio" name="ques${questionNo+1}" value="1" class="choice-btn"><span class="choice-opt">${questions[questionNo].opt[0]}</span></label><br>
@@ -33,8 +33,7 @@ function nextQues(){
           <label><input type="radio" name="ques${questionNo+1}" value="4" class="choice-btn"><span class="choice-opt">${questions[questionNo].opt[3]}</span></label><br>
     `;
     choicesElement.innerHTML = choicesHtml;
-    
-    questionNo++;
+
 }
 
 function nextClick(){
@@ -44,7 +43,8 @@ function nextClick(){
     } 
     else    userChoices.push(0);
 
-    nextQues();
+    nextQues();  
+    questionNo++;
 }
 
 // function prevQues(){

@@ -8,13 +8,14 @@ function clearScore(){
     localStorage.clear();
 }
 
-function rankList(){
-    highscores = JSON.parse(localStorage.getItem('highscore'));
-    let rankHtml=`
+let rankHtml=`
         <div class="grid-name" style="text-decoration: underline; margin-bottom: 30px">Name</div>
         <div class="grid-score" style="text-decoration: underline;">Score</div>
         <div class="grid-time" style="text-decoration: underline;">Time</div>
     `;
+
+function rankList(){
+    highscores = JSON.parse(localStorage.getItem('highscore'));
     for (let i = 0; i < (highscores?.length || 0); i++) {
         rankHtml += `
             <div class="grid-name">${highscores[i].name}</div>
