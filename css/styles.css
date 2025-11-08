@@ -121,7 +121,9 @@ input[type="radio"] {
   cursor: pointer;
 }
 .insta-ans{
-    background-color: #fa8d21;
+    color: black;
+    background-color: #f0d8b9;
+    box-shadow: 1px 1px 0 black;
     border-radius: 30px;
     text-align: center;
     width: 235px;
