@@ -1,7 +1,8 @@
-window.questionNo = 0;     
+window.questionNo = 1;     
 let questionNoElement = document.querySelector('.question-no')
 let questionElement = document.querySelector('.question');
 let choicesElement = document.querySelector('.choices')
+let checkBtn = true;
 window.userChoices = [];
 
 function nextQues(){
@@ -37,14 +38,38 @@ function nextQues(){
 }
 
 function nextClick(){
-    let selected = document.querySelector(`input[name="ques${questionNo}"]:checked`);
-    if (selected) {
-        userChoices.push(parseInt(selected.value));
-    } 
-    else    userChoices.push(0);
-
-    nextQues();  
-    questionNo++;
+    if(checkBtn===true){
+        checkBtn = false;
+        let selected = document.querySelector(`input[name="ques${questionNo}"]:checked`);
+        if (selected) {
+            userChoices.push(parseInt(selected.value));
+        } 
+        else    userChoices.push(0);
+        console.log(userChoices[userChoices.length-1]);
+        console.log(questions[questionNo-1].ans);
+        document.querySelectorAll('.choice-btn').forEach(radio => {radio.disabled = true;});
+        if(userChoices[userChoices.length-1]===0){
+            document.querySelector('.insta-ans').style.visibility = 'visible';
+            document.querySelector('.insta-ans').innerText = 'Unattempted!';
+        }
+        else if(userChoices[userChoices.length-1]===questions[questionNo-1].ans){
+            document.querySelector('.insta-ans').style.visibility = 'visible';
+            document.querySelector('.insta-ans').innerText = '✔️Correct!';
+        }
+        else{
+            document.querySelector('.insta-ans').style.visibility = 'visible';
+            document.querySelector('.insta-ans').innerText = '❌Incorrect!';
+        }
+        document.querySelector('.nxt-btn').innerText = 'Next';
+    }
+    else{
+        nextQues();
+        document.querySelector('.insta-ans').style.visibility = 'hidden';
+        document.querySelector('.insta-ans').innerText = '';
+        document.querySelector('.nxt-btn').innerText = 'Check';
+        checkBtn = true; 
+        questionNo++;
+    }
 }
 
 // function prevQues(){

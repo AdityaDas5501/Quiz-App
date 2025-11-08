@@ -3,9 +3,7 @@ window.highscores = [];
 function restart(){
     document.querySelector('.result-screen').style.display="none";
     document.querySelector('.start-screen').style.display="flex";
-    questionNo=0;
-    nextQues();
-    questionNo=0;
+    questionNo=1;
     document.querySelector('.nxt-btn').innerText = 'Next';
 }
 
