@@ -288,6 +288,11 @@ input[type="radio"] {
     background-color: #FFD54F;
     border-radius: 50px;
 }
+.rank-grid * {
+    word-wrap: break-word; /* ensures long words wrap */
+    overflow-wrap: anywhere; /* modern and better */
+    margin: 0 10px;
+}
 .bottom-option{
     display: flex;
 }
