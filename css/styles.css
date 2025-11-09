@@ -281,9 +281,10 @@ input[type="radio"] {
 .rank-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-content: center;
+    justify-content: center;
+    overflow-y: auto;
     text-align: center;
-    height: auto;
+    max-height: 40vh;
     padding: 20px 0;
     background-color: #FFD54F;
     border-radius: 50px;
