@@ -5,6 +5,8 @@ function restart(){
     document.querySelector('.start-screen').style.display="flex";
     questionNo=1;
     userChoices = [];
+    min = 0;
+    sec = 0;
     document.querySelector('.nxt-btn').innerText = 'Next';
 }
 
@@ -23,6 +25,6 @@ function saveScore(){
     window.highscores = JSON.parse(localStorage.getItem("highscores")) || [];
     highscores.push({name: playerName, score: score, minutes: min, seconds: sec});
     document.querySelector('.nameInput').value = '';
-    localStorage.setItem("highscore", JSON.stringify(highscores));
+    localStorage.setItem("highscores", JSON.stringify(highscores));
     viewHighScoreResult();
 }
