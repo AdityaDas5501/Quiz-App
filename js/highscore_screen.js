@@ -5,6 +5,7 @@ function back(){
     userChoices = [];
     min = 0;
     sec = 0;
+    document.querySelector('.timer').innerText = `Time Elapsed - 0:0`;
 }
 
 function clearScore(){

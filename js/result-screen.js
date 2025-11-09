@@ -7,7 +7,7 @@ function restart(){
     userChoices = [];
     min = 0;
     sec = 0;
-    document.querySelector('.nxt-btn').innerText = 'Next';
+    document.querySelector('.timer').innerText = `Time Elapsed - 0:0`;
 }
 
 function viewHighScoreResult(){
